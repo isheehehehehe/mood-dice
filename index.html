@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+<canvas id="stars"></canvas>
+
+<!-- FIRST SCREEN -->
+<div id="intro" class="screen active">
+  <p class="intro-text">
+    hello my cutu priyaaaa &lt;3  
+    <br><br>
+    this little universe is for you  
+    <br><br>
+    tap anywhere ✨
+  </p>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="screen">
+  <h1>how are you feeling?</h1>
+
+  <div id="moods">
+    <button onclick="selectMood('sad')">😔 Sad</button>
+    <button onclick="selectMood('happy')">😊 Happy</button>
+    <button onclick="selectMood('romantic')">💖 Romantic</button>
+    <button onclick="selectMood('lonely')">🌙 Lonely</button>
+    <button onclick="selectMood('weird')">🤪 Weird</button>
+    <button onclick="selectMood('lazy')">😴 Lazy</button>
+    <button onclick="selectMood('bored')">😐 Bored</button>
+  </div>
+
+  <div id="diceScreen" class="hidden">
+    <div id="dice">🎲</div>
+    <p id="message"></p>
+
+    <textarea id="customMsg" placeholder="write something for yourself…"></textarea>
+    <button onclick="saveMessage()">💾 save</button>
+
+    <a id="playlistLink" target="_blank">🎧 play mood playlist</a>
+
+    <div class="actions">
+      <button onclick="rollAgain()">🎲 roll again</button>
+      <button onclick="goBack()">⬅ moods</button>
+    </div>
+  </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="https://open.spotify.com/track/2JpizrCu0etCqml1LmimAy?si=9ab241e6f6644dd3">
+</audio>
+
+<audio id="clickSound">
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b6d87.mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
